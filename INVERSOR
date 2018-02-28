@@ -1,0 +1,27 @@
+#include "stdafx.h"
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main() {
+	int N, aux, n, a;
+	cin>>N;
+	a=N;
+	while(a>0){
+		aux=a%10;
+		n=n+1;
+		a=a/10;
+	}
+	int i=n,aux2=0,Z=0,b;
+	b=N;
+    do{
+		aux2=b%10;
+		Z=Z+(aux2*(pow(10,i-1)));
+		b=b/10;
+		i--;
+	}while(i>0);
+	cout<<Z;
+	return 0;
+}
+
