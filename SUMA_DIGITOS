@@ -1,0 +1,18 @@
+#include "stdafx.h"
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	int N, aux, n, SUM, a;
+	cin>>N;
+	a=N;
+	while(a>0){
+		aux=a%10;
+		SUM=SUM+aux;
+		a=a/10;
+	}
+	cout<<SUM;
+	return 0;
+}
+
