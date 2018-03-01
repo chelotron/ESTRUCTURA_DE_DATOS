@@ -1,0 +1,17 @@
+#include "stdafx.h"
+#include <iostream>
+#include "math.h"
+
+using namespace std;
+
+int main() {
+	int N, aux, n, a;
+	cin>>N;
+	a=N;
+	while(a>0){
+		aux=a%10;
+		if (aux>=8) cout<<"EL DIGITO "<<aux<<" NO CORRESPONDE A LA BASE 8"<<"\n";
+		a=a/10;
+	}
+	return 0;
+}
