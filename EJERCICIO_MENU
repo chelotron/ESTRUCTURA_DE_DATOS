@@ -1,0 +1,73 @@
+#include "stdafx.h"
+#include <iostream>
+#include <stdio.h>
+#include <math.h>
+
+using namespace std;
+
+int SumDig(int N);
+int ContP(int N);
+
+int main() {
+	int op, N, RES, c;
+
+	do{
+	cout<<"MENU"<<"\n";
+	cout<<"Opcion 1: Sumar Digitos"<<"\n";
+	cout<<"Opcion 2: Contar Pares"<<"\n";
+	cout<<"Opcion 0: Salir"<<"\n";
+	cin>>op;
+	system("cls");
+	switch(op)
+	{
+		case 1:
+			system("cls");
+		    cout<<"Usted eligio: Suma de digitos"<<"\n";
+		    cout<<"Ingrese el valor de N"<<"\n";
+		    cin>>N;
+		    RES=SumDig(N);
+		    system("cls");
+		    cout<<"El resultado es: "<<RES<<"\n";
+	    break;
+	    case 2:
+		    system("cls");
+	        cout<<"Usted eligio: Contar digitos pares"<<"\n";
+		    cout<<"Ingrese el valor de N"<<"\n";
+		    cin>>N;
+	        RES=ContP(N);
+	        system("cls");
+	        cout<<"El total de pares es : "<<RES<<"\n";
+	    break;
+	    case 0:
+		    system("cls");
+		    cout<<"Usted esta saliendo del programa"<<"\n";
+		break;
+	    default:
+		system("cls");
+		cout<<"ERROR ELIJA UNA OPCION VALIDA"<<"\n";
+	}
+    }while(op!=0);
+return 0;
+}
+
+int SumDig(int N){
+	int aux, n, SUM, a;
+	a=N;
+	while(a>0){
+		aux=a%10;
+		SUM=SUM+aux;
+		a=a/10;
+	}
+	return SUM;
+}
+
+int ContP(int N){
+	int aux, n, a;
+	a=N;
+	while(a>0){
+		aux=a%10;
+		if (aux%2==0) n=n+1;
+		a=a/10;
+	}
+	return n;
+}
