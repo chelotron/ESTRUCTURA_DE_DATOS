@@ -8,7 +8,7 @@ public:
 	vector(void);
 	//dstrc
 	~vector(void);
-	//metods
+	//methods
 	void charge(int vec[], int n);
 	void show(int vec[], int n);
 	void order(int vec[], int n);
