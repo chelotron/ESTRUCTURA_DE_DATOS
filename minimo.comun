@@ -1,0 +1,110 @@
+pragma once
+class mcd
+{
+private:
+	int a, b,c ,y ,z;
+public:
+	mcd(void);
+	~mcd(void);
+	int calcular(int a, int b);
+};
+
+
+#include "StdAfx.h"
+#include "mcd.h"
+
+
+mcd::mcd(void)
+{
+	a=2;
+	b=1;
+
+}
+mcd::~mcd(void)
+{
+}
+int mcd::calcular(int a, int b){
+	if (b==0)
+		return a;
+	else
+		return (b, a % b);
+}
+
+
+// 123.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "mcd.h"
+using namespace std;
+void main(){
+	mcd mcd1, mcd2;
+	int a,b,x,z,y=1,i=2;
+	cout<<"por favor ingrese dos numeros: ";
+	cin>>a;
+	cin>>b;
+	if(a<b)
+		{
+			x=a;
+			z=b;
+		}
+		else 
+		{
+			x=b;
+			z=a;
+		}
+	do{
+		if(x%i==0 && z%i==0)
+		{
+			y=y*i;
+			x=x/i;
+			z=z/i;
+		}
+		else
+		{i++;}
+	   }
+	while(i<=x);
+	cout<<"el MCD es: "<<mcd1.calcular(a,b);
+	getch();
+}
+
+// 123.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "mcd.h"
+using namespace std;
+void main(){
+	mcd mcd1, mcd2;
+	int a,b,x,z,y=1,i=2;
+	cout<<"por favor ingrese dos numeros: ";
+	cin>>a;
+	cin>>b;
+	if(a<b)
+		{
+			x=a;
+			z=b;
+		}
+		else 
+		{
+			x=b;
+			z=a;
+		}
+	do{
+		if(x%i==0 && z%i==0)
+		{
+			y=y*i;
+			x=x/i;
+			z=z/i;
+		}
+		else
+		{i++;}
+	   }
+	while(i<=x);
+	cout<<"el MCD es: "<<mcd1.calcular(a,b);
+	getch();
+}
